@@ -1,13 +1,15 @@
-package com.example.elsa.myresponsimovie;
+package com.example.elsa.myresponsimovie.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ActivityDetail extends AppCompatActivity {
+import com.example.elsa.myresponsimovie.R;
+
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail);
+        setContentView(R.layout.activity_main);
     }
 }
