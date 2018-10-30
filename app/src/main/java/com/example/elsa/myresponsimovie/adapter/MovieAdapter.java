@@ -18,7 +18,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         this.movieList = movieList;
     }
 
+
+
     @NonNull
     @Override
-    public RecyclerView.ViewHolder
+    public ViewHolder onCreateViewHolder
+
 }
