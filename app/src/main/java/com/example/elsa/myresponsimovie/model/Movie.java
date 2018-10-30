@@ -1,33 +1,60 @@
 package com.example.elsa.myresponsimovie.model;
 
-public class Movie
+import java.io.Serializable;
 
-    private String nama;
-    private String NIM;
-    private String jurusan;
+public class Movie implements Serializable {
 
+    private String title;
+    private String description;
+    private String date;
+    private String url;
+    private double rating;
 
-        public String getNama() {
-            return nama;
-        }
+    public Movie(String title, String description, String date, String url, double rating) {
+        this.title = title;
+        this.description = description;
+        this.date = date;
+        this.url = url;
+        this.rating = rating;
+    }
 
-        public void setNama(String nama) {
-            this.nama = nama;
-        }
+    public String getTitle() {
+        return title;
+    }
 
-        public String getNIM() {
-            return NIM;
-        }
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-        public void setNIM(String NIM) {
-            this.NIM = NIM;
-        }
+    public String getDescription() {
+        return description;
+    }
 
-        public String getJurusan() {
-            return jurusan;
-        }
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-        public void setJurusan(String jurusan) {
-            this.jurusan = jurusan;
-        }
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public double getRating() {
+        return rating;
+    }
+
+    public void setRating(double rating) {
+        this.rating = rating;
+    }
 }
