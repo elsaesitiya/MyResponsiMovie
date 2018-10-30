@@ -3,11 +3,13 @@ package com.example.elsa.myresponsimovie.view;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.elsa.myresponsimovie.R;
@@ -15,15 +17,23 @@ import com.example.elsa.myresponsimovie.adapter.MovieAdapter;
 import com.example.elsa.myresponsimovie.api.API;
 import com.example.elsa.myresponsimovie.api.IRetrofit;
 import com.example.elsa.myresponsimovie.api.RetrofitClient;
+import com.example.elsa.myresponsimovie.model.Movie;
 import com.example.elsa.myresponsimovie.model.MovieResponse;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
+    private RecyclerView rvMovie;
+    private ProgressBar progressBar;
+    private MovieAdapter movieAdapter;
+    private List<Movie> movieList;
+    private IRetrofit iRetrofit;
+    String TAG = "TEST";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<MovieResponse> call, Response<MovieResponse> response) {
                 if (response.body() != null) {
                     movieList.clear();
-                    movieList.addAll(response.body().getResults());
+                    movieList.addAll(response.body().getResult());
                     movieAdapter.notifyDataSetChanged();
                     progressBar.setVisibility(View.GONE);
                 }
