@@ -15,7 +15,7 @@
         android:src="@color/colorAccent"/>
 
     <TextView
-        android:id="@+id/tvTitelD"
+        android:id="@+id/tvTitleD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/imgMovieD"
@@ -30,7 +30,7 @@
         android:id="@+id/tvDateD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvTitelD"
+        android:layout_below="@id/tvTitleD"
         android:layout_marginStart="@dimen/dimen_8dp"
         android:layout_marginTop="@dimen/dimen_8dp"
         android:text="Tayang Tadi malam"/>
