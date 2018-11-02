@@ -14,7 +14,7 @@ import com.squareup.picasso.Picasso;
 public class MovieDetailActivity extends AppCompatActivity {
     private Movie movie;
     private ImageView imgMovie;
-    private TextView tvTitle, tvDate, tvDiscription;
+    private TextView tvTitle, tvDate, tvDescription;
     private RatingBar ratingBar;
 
     @Override
@@ -34,10 +34,10 @@ public class MovieDetailActivity extends AppCompatActivity {
         tvTitle.setText(movie.getTitle());
 
         tvDate = findViewById(R.id.tvDateD);
-        tvDate.setText("Tayang anggal : " + movie.getDate());
+        tvDate.setText("Tayang anggal :" + " " + movie.getDate());
 
-        tvDiscription = findViewById(R.id.txtDiscriptionD);
-        tvDiscription.setText(movie.getDescription());
+        tvDescription = findViewById(R.id.tvDescription);
+        tvDescription.setText(movie.getDescription());
 
         ratingBar = findViewById(R.id.rbMovieD);
         ratingBar.setRating((float)(movie.getRating()/2));

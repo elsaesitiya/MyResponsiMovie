@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<MovieResponse> call, Response<MovieResponse> response) {
                 if (response.body() != null) {
                     movieList.clear();
-                    movieList.addAll(response.body().getResult());
+                    movieList.addAll(response.body().getResults());
                     movieAdapter.notifyDataSetChanged();
                     progressBar.setVisibility(View.GONE);
                 }

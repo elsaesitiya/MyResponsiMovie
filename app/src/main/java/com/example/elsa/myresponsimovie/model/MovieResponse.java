@@ -3,17 +3,21 @@ package com.example.elsa.myresponsimovie.model;
 import java.util.List;
 
 public class MovieResponse {
-    private List<Movie> result;
+    private List<Movie> results;
 
-    public MovieResponse(List<Movie> result) {
-        this.result = result;
+    public MovieResponse(){
+
     }
 
-    public List<Movie> getResult() {
-        return result;
+    public MovieResponse(List<Movie> results) {
+        this.results = results;
     }
 
-    public void setResult(List<Movie> result) {
-        this.result = result;
+    public List<Movie> getResults() {
+        return results;
+    }
+
+    public void setResults(List<Movie> results) {
+        this.results = results;
     }
 }

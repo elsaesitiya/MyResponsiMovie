@@ -1,22 +1,37 @@
 package com.example.elsa.myresponsimovie.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 public class Movie implements Serializable {
-
+    @SerializedName("title")
     private String title;
+
+    @SerializedName("overview")
     private String description;
+
+    @SerializedName("release_date")
     private String date;
+
+    @SerializedName("poster_path")
     private String url;
+
+    @SerializedName("vote_average")
     private double rating;
 
-    public Movie(String title, String description, String date, String url, double rating) {
+    public Movie(){
+
+    }
+
+    public Movie(String title, String description, String date, String url, long rating) {
         this.title = title;
         this.description = description;
         this.date = date;
         this.url = url;
         this.rating = rating;
     }
+
 
     public String getTitle() {
         return title;
